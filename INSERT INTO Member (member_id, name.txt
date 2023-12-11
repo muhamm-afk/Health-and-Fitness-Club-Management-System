@@ -1,0 +1,39 @@
+INSERT INTO Member (member_id, name, email)
+VALUES (4, 'New Member', 'new.member@example.com');
+
+SELECT * FROM Member;
+
+
+UPDATE Member
+SET email = 'updated.email@example.com'
+WHERE member_id = 4;
+
+DELETE FROM Member
+WHERE member_id = 4;
+
+
+INSERT INTO fitness_goal (goal_id, goal_weight, goal_BMI, goal_Descp, member_id)
+VALUES (4, 70.0, 22.0, 'Improve overall fitness', 2);
+
+
+SELECT * FROM fitness_goal;
+
+
+
+UPDATE fitness_goal
+SET goal_Descp = 'Achieve weight loss and muscle toning'
+WHERE goal_id = 4;
+
+
+DELETE FROM fitness_goal
+WHERE goal_id = 4;
+
+
+
+INSERT INTO Event (event_id, event_type, evt_descrp, time, place, schedule_id)
+VALUES (4, 'Seminar', 'Educational seminar on industry trends', '16:30:00', 'Seminar Hall', 1);
+
+INSERT INTO Event (event_id, event_type, evt_descrp, time, place, schedule_id)
+VALUES (4, 'Seminar', 'Educational seminar on industry trends', '16:30:00', 'Seminar Hall', 1);
+
+SELECT * FROM Event;

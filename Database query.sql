@@ -74,24 +74,8 @@ CREATE TABLE DashBoard (
     FOREIGN KEY (member_id) REFERENCES Member(member_id)
 );
 
-CREATE TABLE Event (
-    event_id INT PRIMARY KEY,
-    event_type VARCHAR(50),
-    evt_descrp VARCHAR(255),
-    time TIME,
-    place VARCHAR(100),
-    schedule_id INT,
-    FOREIGN KEY (schedule_id) REFERENCES schedule(Schedule_id)
-);
 
-CREATE TABLE roomBooking (
-    Booking_id INT PRIMARY KEY,
-    Date DATE,
-    place VARCHAR(100),
-    time TIME,
-    schedule_id INT,
-    FOREIGN KEY (schedule_id) REFERENCES schedule(Schedule_id)
-);
+
 
 CREATE TABLE trainer (
     trainer_id INT PRIMARY KEY,
